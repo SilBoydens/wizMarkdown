@@ -1,6 +1,6 @@
-#wizMarkdown
+# wizMarkdown
 
-##Install it
+## Install it
 
 1. `bower install wiz-markdown`
 2. wizMarkdown requires `ngSanitize` so go ahead and add a script reference to `angular-sanitize.js`
@@ -12,11 +12,11 @@ Example:
       'wiz.markdown'
     ]);
 
-##Use it
+## Use it
 
 There are 4 options available to you with this plugin. In each example `mdText` is a `scope` variable that contains a markdown string.
 
-###Display output using a directive
+### Display output using a directive
 
     <wiz-markdown content="mdText"></wiz-markdown>
     
@@ -24,23 +24,23 @@ There are 4 options available to you with this plugin. In each example `mdText` 
 
 > A. It's best to bind to the element so you don't get any pre-compile flashes of the page
     
-###..or a filter
+### ..or a filter
 
     <div ng-bind-html="mdText | wizMarkdownFltr"></div>
     
-###..or a service
+### ..or a service
 
     <div ng-bind-html="mdText"></div>
     
     $scope.mdText = wizMarkdownSvc.Transform('#H1 heading');
 
-##Editor
+## Editor
 
     <wiz-markdown-editor content="mdText"></wiz-markdown-editor>
     
 The editor is essentially a textbox but it now has the ability to automatically format the markdown text via toolbar buttons.
 
-###Toolbar
+### Toolbar
 
     <wiz-markdown-editor content="mdText">
         <wiz-toolbar-button command="bold">Bold</wiz-toolbar-button>
@@ -53,7 +53,7 @@ You can specify your own styling and content for each button.
 
 The toolbar is positioned above the editor by default but if you specify `toolbar="bottom"` to the editor e.g. `<wiz-markdown-editor content="mdText" toolbar="bottom">` it will appear below.
 
-###Available button commands
+### Available button commands
 
 undo,
 redo,
@@ -78,12 +78,12 @@ h6,
 tab,
 untab
 
-##Textarea only
+## Textarea only
 If you simply want a textarea without the toolbars then use:
 
     <wiz-markdown-input content="mdTextarea"></wiz-markdown-input>
 
-##Syntax highlighting
+## Syntax highlighting
 
 [highlight.js](http://highlightjs.org/) is built in so all you need to do is pick a theme and drop the css link in the head of your webpage e.g.
 
@@ -91,11 +91,11 @@ If you simply want a textarea without the toolbars then use:
 
 Highlight.js website has a good [theme test page](http://highlightjs.org/static/test.html) that you should find useful.
 
-##Play
+## Play
 
 Now have a play by downloading the zip and running the code ;-)
 
-##Licence
+## Licence
 
 wizMarkdown is covered by the MIT Licence
 
